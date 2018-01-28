@@ -74,18 +74,14 @@ public class MyKeyGen {
 
         // Write to privKey
         ObjectOutputStream oosPriv = new ObjectOutputStream(new FileOutputStream(privKey));
-        //oosPriv.writeChars("-----BEGIN PRIVATE KEY-----\n");
         oosPriv.writeObject(n); // write N first
         oosPriv.writeObject(d); // write D last
-        //oosPriv.writeChars("-----END PRIVATE KEY-----");
         oosPriv.close(); // close OOS
         
         // Write to pubKey
         ObjectOutputStream oosPub = new ObjectOutputStream(new FileOutputStream(pubKey));
-        //oosPub.writeChars("-----BEGIN PUBLIC KEY-----\n");
         oosPub.writeObject(n); // write N first
         oosPub.writeObject(e); // write D last
-        //oosPub.writeChars("-----END PUBLIC KEY-----");
         oosPub.close(); // close OOS
     }
     
