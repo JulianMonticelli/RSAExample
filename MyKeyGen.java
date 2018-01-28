@@ -81,7 +81,7 @@ public class MyKeyGen {
         // Write to pubKey
         ObjectOutputStream oosPub = new ObjectOutputStream(new FileOutputStream(pubKey));
         oosPub.writeObject(n); // write N first
-        oosPub.writeObject(e); // write D last
+        oosPub.writeObject(e); // write E last
         oosPub.close(); // close OOS
     }
     
